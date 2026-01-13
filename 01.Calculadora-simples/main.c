@@ -1,49 +1,55 @@
 #include <stdio.h>
 
 int main() {
+    float num1, num2, calculo;
     int op;
-    float num1, num2, resultado;
 
     do {
-        printf("\n\t===== CALCULADORA =====\n");
-        printf("\t1 - Soma\n");
-        printf("\t2 - Subtrair\n");
-        printf("\t3 - Multiplicar\n");
-        printf("\t4 - Dividir\n");
-        printf("\t5 - Sair\n");
-        printf("\tEscolha uma opcao: ");
-        scanf("%d", &op);
+        printf("\n\t**** CALCULADORA ****\n");
+        printf("\n\t 1 - Soma\n");
+        printf("\t 2 - Subtrair\n");
+        printf("\t 3 - Multiplicar\n");
+        printf("\t 4 - Dividir\n");
+        printf("\t 5 - Sair\n");
+        printf("\n\t Digite: ");
+
+        if (scanf("%d", &op) != 1) {
+            printf("\n\tEntrada invalida! Digite um numero.\n");
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF) {}
+            continue;
+        }
 
         if (op >= 1 && op <= 4) {
             printf("\n\tDigite o primeiro valor: ");
             scanf("%f", &num1);
 
-            printf("\tDigite o segundo valor: ");
+            printf("\n\tDigite o segundo valor: ");
             scanf("%f", &num2);
         }
 
         switch (op) {
             case 1:
-                resultado = num1 + num2;
-                printf("\tResultado: %.2f\n", resultado);
+                calculo = num1 + num2;
+                printf("\tA soma e: %.2f\n", calculo);
                 break;
 
             case 2:
-                resultado = num1 - num2;
-                printf("\tResultado: %.2f\n", resultado);
+                calculo = num1 - num2;
+                printf("\tA subtracao e: %.2f\n", calculo);
                 break;
 
             case 3:
-                resultado = num1 * num2;
-                printf("\tResultado: %.2f\n", resultado);
+                calculo = num1 * num2;
+                printf("\tA multiplicacao e: %.2f\n", calculo);
                 break;
 
             case 4:
                 if (num2 == 0) {
                     printf("\tErro: divisao por zero!\n");
                 } else {
-                    resultado = num1 / num2;
-                    printf("\tResultado: %.2f\n", resultado);
+                    calculo = num1 / num2;
+                    printf("\tA divisao e: %.2f\n", calculo);
                 }
                 break;
 
@@ -52,11 +58,12 @@ int main() {
                 break;
 
             default:
-                printf("\n\tOpcao invalida!\n");
+                printf("\tOpcao invalida.\n");
+                break;
         }
 
     } while (op != 5);
 
-    printf("\n\tPrograma finalizado.\n");
+    printf("\n\tSaindo do programa.\n");
     return 0;
 }
