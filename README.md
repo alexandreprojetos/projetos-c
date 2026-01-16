@@ -1,7 +1,7 @@
 📘 Projetos de Estudo – Análise e Desenvolvimento de Sistemas (ADS)
 
 Bem-vindo(a) ao meu repositório em C!
-Aqui você encontrará diversos projetos desenvolvidos durante minha jornada no curso de Análise e Desenvolvimento de Sistemas (ADS) mais focado na linguagem C.
+Aqui você encontrará diversos projetos desenvolvidos durante minha jornada na formação de Análise e Desenvolvimento de Sistemas (ADS).
 
 🎯 Objetivo deste repositório
 
